@@ -1,6 +1,5 @@
 package ds.sorting;
 
-import ds.tree.TreeNode;
 import util.TODO;
 
 import java.util.Collections;
