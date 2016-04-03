@@ -14,4 +14,29 @@ public class LinkedListNode<T> {
         this.next = next;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        LinkedListNode<T> curr = this;
+        while(curr != null) {
+            sb.append(curr.data);
+            sb.append("->");
+            curr = curr.next;
+        }
+        sb.append("null");
+        return sb.toString();
+    }
+
+    public int size() {
+
+        int count = 0;
+        LinkedListNode<T> curr = this;
+        while(curr != null) {
+            count++;
+            curr = curr.next;
+        }
+
+        return count;
+    }
+
 }

@@ -3,9 +3,9 @@ package ds.linkedlist;
 import java.util.HashSet;
 import java.util.Set;
 
-public class FindDuplicates<T extends Comparable<T>> {
+public class FindDuplicates<T> {
 
-    public void dedup(LinkedListNode<T> root) {
+    public void dedupWithSet(LinkedListNode<T> root) {
         if (root == null) {
             return;
         }
@@ -22,6 +22,26 @@ public class FindDuplicates<T extends Comparable<T>> {
                 set.add(curr.next.data);
                 curr = curr.next;
             }
+        }
+    }
+
+    public void dedup(LinkedListNode<T> root) {
+        if (root == null) {
+            return;
+        }
+
+        LinkedListNode<T> curr = root;
+
+        while (curr != null) {
+            LinkedListNode<T> runner = curr;
+            while (runner.next != null) {
+                if (curr.data.equals(runner.next.data)) {
+                    runner.next = runner.next.next;
+                } else {
+                    runner = runner.next;
+                }
+            }
+            curr = curr.next;
         }
     }
 
