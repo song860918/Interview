@@ -1,12 +1,14 @@
 package ds.sorting;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import util.TestUtil;
 
 import java.util.List;
 
-public abstract class SortTest {
+@Ignore
+public class SortTest {
 
     protected Sort<Integer> sort;
 

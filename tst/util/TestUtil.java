@@ -1,5 +1,7 @@
 package util;
 
+import ds.linkedlist.LinkedListNode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -22,6 +24,30 @@ public class TestUtil {
 
         System.out.println(list);
         return list;
+    }
+
+    public static LinkedListNode<Integer> integerLinkedList(int... integers) {
+
+        LinkedListNode<Integer> root = new LinkedListNode<Integer>(-1);
+        LinkedListNode<Integer> curr = root;
+        for (int i : integers) {
+            curr.next = new LinkedListNode<Integer>(i);
+            curr = curr.next;
+        }
+
+        return root.next;
+    }
+
+    public static int size(LinkedListNode<Integer> root) {
+
+        int count = 0;
+        LinkedListNode<Integer> curr = root;
+        while(curr != null) {
+            count++;
+            curr = curr.next;
+        }
+
+        return count;
     }
 
 }

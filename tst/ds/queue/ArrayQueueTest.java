@@ -1,6 +1,5 @@
-package ds;
+package ds.queue;
 
-import ds.queue.ArrayQueue;
 import org.junit.Before;
 
 public class ArrayQueueTest extends QueueTest {

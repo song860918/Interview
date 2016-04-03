@@ -1,12 +1,14 @@
 package ds.stack;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import util.TestUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Ignore
 public class StackTest {
 
     protected Stack<Integer> stack;
