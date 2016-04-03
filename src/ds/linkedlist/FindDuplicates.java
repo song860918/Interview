@@ -3,6 +3,9 @@ package ds.linkedlist;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Cracking The Coding Interview 2.1
+ */
 public class FindDuplicates<T> {
 
     public void dedupWithSet(LinkedListNode<T> root) {

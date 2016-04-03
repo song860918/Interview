@@ -1,5 +1,8 @@
 package ds.array;
 
+/**
+ * Cracking The Coding Interview 1.5
+ */
 public class CompressString {
 
     public String compress(String input) {
