@@ -2,6 +2,9 @@ package ds.recursion;
 
 import java.util.Stack;
 
+/**
+ * Cracking The Coding Interview 9.6
+ */
 public class Parenthesis {
 
     public boolean isBalanced(String input) {
