@@ -1,11 +1,9 @@
 package util;
 
+import ds.graph.GraphNode;
 import ds.linkedlist.LinkedListNode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class TestUtil {
 
@@ -48,6 +46,24 @@ public class TestUtil {
         }
 
         return count;
+    }
+
+    public static GraphNode<Character> characterGraph(char[] chars, char root, String edgeString) {
+        Map<Character, GraphNode<Character>> map = new HashMap<>();
+        for (char c : chars) {
+            map.put(c, new GraphNode<>(c));
+        }
+
+        // edge is expected in the formact of "a->b"
+        String[] edges = edgeString.split(",");
+
+        for (String edge : edges) {
+            edge = edge.trim();
+            String[] nodePair = edge.split("->");
+            map.get(nodePair[0].charAt(0)).neighbors.add(map.get(nodePair[1].charAt(0)));
+        }
+
+        return map.get(root);
     }
 
 }
