@@ -2,12 +2,12 @@ package ds.tree;
 
 public class IntTreeNode {
 
-    int data;
+    int val;
     IntTreeNode left;
     IntTreeNode right;
 
-    public IntTreeNode(int data) {
-        this.data = data;
+    public IntTreeNode(int val) {
+        this.val = val;
     }
 
 }

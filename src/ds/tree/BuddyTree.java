@@ -33,7 +33,7 @@ public class BuddyTree {
             return;
         }
         clearBitHelper(offset, offset % (int)Math.pow(2.0, (double)(level - 1)) == 0 ? curr.left : curr.right, level - 1);
-        curr.data = 0;
+        curr.val = 0;
     }
 
     public void setBit(int offset) {
@@ -44,17 +44,17 @@ public class BuddyTree {
         int binary = offset % (int)Math.pow(2.0, (double)currentLevel);
         if (binary == 0) {
             if (currentLevel == level) {
-                curr.data = 1;
+                curr.val = 1;
             } else {
                 setBitHelper(offset, curr.left, level, currentLevel + 1);
-                curr.data = curr.right.data;
+                curr.val = curr.right.val;
             }
         } else {
             if (currentLevel == level) {
-                curr.data = 1;
+                curr.val = 1;
             } else {
                 setBitHelper(offset, curr.right, level, currentLevel + 1);
-                curr.data = curr.left.data;
+                curr.val = curr.left.val;
             }
         }
     }
