@@ -1,6 +1,6 @@
 package ds.stack;
 
-public interface Stack<T> {
+public interface MyStack<T> {
 
     void push(T data);
 

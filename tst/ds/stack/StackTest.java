@@ -11,7 +11,7 @@ import java.util.List;
 @Ignore
 public class StackTest {
 
-    protected Stack<Integer> stack;
+    protected MyStack<Integer> stack;
 
     @Test
     public void stackPushPeekAndPopTest() {

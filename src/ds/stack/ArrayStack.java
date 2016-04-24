@@ -1,6 +1,6 @@
 package ds.stack;
 
-public class ArrayStack<T> implements Stack<T> {
+public class ArrayStack<T> implements MyStack<T> {
 
     private static final int INITIAL_CAPACITY = 10;
 
